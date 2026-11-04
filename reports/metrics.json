@@ -1,0 +1,470 @@
+{
+  "test_images": 192,
+  "test_tiles": 81,
+  "test_tiles_per_class": {
+    "Blowhole": 9,
+    "Break": 8,
+    "Crack": 4,
+    "Fray": 3,
+    "Free": 54,
+    "Uneven": 6
+  },
+  "models": {
+    "logreg_baseline": {
+      "n": 192,
+      "accuracy": 0.7447916666666666,
+      "macro_f1": 0.4799205543724754,
+      "balanced_accuracy": 0.4947712418300654,
+      "per_class": {
+        "Free": {
+          "precision": 0.837037037037037,
+          "recall": 0.8308823529411765,
+          "f1": 0.8339483394833949,
+          "support": 136
+        },
+        "Blowhole": {
+          "precision": 0.9,
+          "recall": 0.5294117647058824,
+          "f1": 0.6666666666666666,
+          "support": 17
+        },
+        "Break": {
+          "precision": 0.6,
+          "recall": 0.75,
+          "f1": 0.6666666666666666,
+          "support": 12
+        },
+        "Crack": {
+          "precision": 0.1111111111111111,
+          "recall": 0.125,
+          "f1": 0.11764705882352941,
+          "support": 8
+        },
+        "Fray": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "Uneven": {
+          "precision": 0.5,
+          "recall": 0.7333333333333333,
+          "f1": 0.5945945945945946,
+          "support": 15
+        }
+      },
+      "defect_detection": {
+        "defects": 56,
+        "caught": 34,
+        "recall": 0.6071428571428571,
+        "good_tiles": 136,
+        "false_alarms": 23,
+        "false_alarm_rate": 0.16911764705882354,
+        "pr_auc": 0.628346998994899
+      },
+      "confusion_matrix": [
+        [
+          113,
+          1,
+          4,
+          7,
+          1,
+          10
+        ],
+        [
+          7,
+          9,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          9,
+          0,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          0,
+          11
+        ]
+      ],
+      "C": 1.0,
+      "features": 613,
+      "val": {
+        "n": 193,
+        "accuracy": 0.7616580310880829,
+        "macro_f1": 0.6463688585090337,
+        "balanced_accuracy": 0.6105832076420312,
+        "per_class": {
+          "Free": {
+            "precision": 0.821917808219178,
+            "recall": 0.8823529411764706,
+            "f1": 0.851063829787234,
+            "support": 136
+          },
+          "Blowhole": {
+            "precision": 0.5454545454545454,
+            "recall": 0.35294117647058826,
+            "f1": 0.42857142857142855,
+            "support": 17
+          },
+          "Break": {
+            "precision": 0.75,
+            "recall": 0.46153846153846156,
+            "f1": 0.5714285714285714,
+            "support": 13
+          },
+          "Crack": {
+            "precision": 0.8,
+            "recall": 0.5,
+            "f1": 0.6153846153846154,
+            "support": 8
+          },
+          "Fray": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+          },
+          "Uneven": {
+            "precision": 0.3684210526315789,
+            "recall": 0.4666666666666667,
+            "f1": 0.4117647058823529,
+            "support": 15
+          }
+        },
+        "defect_detection": {
+          "defects": 57,
+          "caught": 31,
+          "recall": 0.543859649122807,
+          "good_tiles": 136,
+          "false_alarms": 16,
+          "false_alarm_rate": 0.11764705882352941,
+          "pr_auc": 0.7047168505900615
+        }
+      },
+      "ci95": {
+        "macro_f1": [
+          0.3766332517914225,
+          0.6225491071493854
+        ],
+        "defect_recall": [
+          0.4111011904761905,
+          0.8571428571428571
+        ],
+        "alarm_recall": [
+          0.8115942028985508,
+          1.0
+        ]
+      },
+      "alarm": {
+        "target_val_recall": 0.98,
+        "val": {
+          "threshold": 0.003371264190026535,
+          "caught": 56,
+          "defects": 57,
+          "recall": 0.9824561403508771,
+          "false_alarms": 113,
+          "good_tiles": 136,
+          "false_alarm_rate": 0.8308823529411765
+        },
+        "test": {
+          "threshold": 0.003371264190026535,
+          "caught": 51,
+          "defects": 56,
+          "recall": 0.9107142857142857,
+          "false_alarms": 116,
+          "good_tiles": 136,
+          "false_alarm_rate": 0.8529411764705882
+        }
+      }
+    },
+    "mobilenet_v3_small": {
+      "n": 192,
+      "accuracy": 0.8802083333333334,
+      "macro_f1": 0.7465908256611309,
+      "balanced_accuracy": 0.6849673202614378,
+      "per_class": {
+        "Free": {
+          "precision": 0.9041095890410958,
+          "recall": 0.9705882352941176,
+          "f1": 0.9361702127659575,
+          "support": 136
+        },
+        "Blowhole": {
+          "precision": 0.6666666666666666,
+          "recall": 0.7058823529411765,
+          "f1": 0.6857142857142857,
+          "support": 17
+        },
+        "Break": {
+          "precision": 0.9090909090909091,
+          "recall": 0.8333333333333334,
+          "f1": 0.8695652173913043,
+          "support": 12
+        },
+        "Crack": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285714,
+          "support": 8
+        },
+        "Fray": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4
+        },
+        "Uneven": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75,
+          "support": 15
+        }
+      },
+      "defect_detection": {
+        "defects": 56,
+        "caught": 42,
+        "recall": 0.75,
+        "good_tiles": 136,
+        "false_alarms": 4,
+        "false_alarm_rate": 0.029411764705882353,
+        "pr_auc": 0.9479395451990242
+      },
+      "confusion_matrix": [
+        [
+          132,
+          3,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          5,
+          12,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          10,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          1,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          9
+        ]
+      ],
+      "parameters": 1524006,
+      "best_epoch": 13,
+      "val": {
+        "n": 193,
+        "accuracy": 0.9740932642487047,
+        "macro_f1": 0.9614537212734556,
+        "balanced_accuracy": 0.9571078431372548,
+        "per_class": {
+          "Free": {
+            "precision": 0.9852941176470589,
+            "recall": 0.9852941176470589,
+            "f1": 0.9852941176470589,
+            "support": 136
+          },
+          "Blowhole": {
+            "precision": 0.8823529411764706,
+            "recall": 0.8823529411764706,
+            "f1": 0.8823529411764706,
+            "support": 17
+          },
+          "Break": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 13
+          },
+          "Crack": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333,
+            "support": 8
+          },
+          "Fray": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+          },
+          "Uneven": {
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871,
+            "support": 15
+          }
+        },
+        "defect_detection": {
+          "defects": 57,
+          "caught": 55,
+          "recall": 0.9649122807017544,
+          "good_tiles": 136,
+          "false_alarms": 2,
+          "false_alarm_rate": 0.014705882352941176,
+          "pr_auc": 0.9830224885626548
+        }
+      },
+      "ci95": {
+        "macro_f1": [
+          0.6240206934785408,
+          0.94495670995671
+        ],
+        "defect_recall": [
+          0.5492730577010451,
+          1.0
+        ],
+        "alarm_recall": [
+          0.8970588235294118,
+          1.0
+        ]
+      },
+      "alarm": {
+        "target_val_recall": 0.98,
+        "val": {
+          "threshold": 0.2655599117279053,
+          "caught": 56,
+          "defects": 57,
+          "recall": 0.9824561403508771,
+          "false_alarms": 22,
+          "good_tiles": 136,
+          "false_alarm_rate": 0.16176470588235295
+        },
+        "test": {
+          "threshold": 0.2655599117279053,
+          "caught": 53,
+          "defects": 56,
+          "recall": 0.9464285714285714,
+          "false_alarms": 19,
+          "good_tiles": 136,
+          "false_alarm_rate": 0.13970588235294118
+        }
+      }
+    }
+  },
+  "gradcam": {
+    "images": 56,
+    "pointing_game": 0.6071428571428571,
+    "centre_baseline": 0.05357142857142857,
+    "random_baseline": 0.11721063285805393,
+    "energy_on_defect": 0.18939845966071647,
+    "mask_area": 0.08830666055484694,
+    "per_class": {
+      "Blowhole": {
+        "images": 17,
+        "pointing_game": 0.5294117647058824,
+        "centre_baseline": 0.058823529411764705,
+        "random_baseline": 0.016262755102040814,
+        "energy_on_defect": 0.01607040022773778,
+        "mask_area": 0.002623705732292917
+      },
+      "Break": {
+        "images": 12,
+        "pointing_game": 0.75,
+        "centre_baseline": 0.0,
+        "random_baseline": 0.10640379198554423,
+        "energy_on_defect": 0.21214874078441426,
+        "mask_area": 0.06802056760204081
+      },
+      "Crack": {
+        "images": 8,
+        "pointing_game": 0.625,
+        "centre_baseline": 0.0,
+        "random_baseline": 0.02663624043367347,
+        "energy_on_defect": 0.006859779328806326,
+        "mask_area": 0.0034005301339285715
+      },
+      "Fray": {
+        "images": 4,
+        "pointing_game": 0.5,
+        "centre_baseline": 0.5,
+        "random_baseline": 0.25843530771683676,
+        "energy_on_defect": 0.374959632559694,
+        "mask_area": 0.20143096301020405
+      },
+      "Uneven": {
+        "images": 15,
+        "pointing_game": 0.6,
+        "centre_baseline": 0.0,
+        "random_baseline": 0.25091012967687076,
+        "energy_on_defect": 0.41550768552309214,
+        "mask_area": 0.2167596726190476
+      }
+    }
+  },
+  "leakage_check": {
+    "test_images_with_a_training_twin": 0.71875,
+    "random_split_test": {
+      "macro_f1": 0.9495094063578392,
+      "accuracy": 0.96875,
+      "defect_recall": 0.9285714285714286
+    },
+    "with_twin": {
+      "images": 138,
+      "defects": 43,
+      "accuracy": 0.9782608695652174,
+      "defect_recall": 0.9767441860465116
+    },
+    "without_twin": {
+      "images": 54,
+      "defects": 13,
+      "accuracy": 0.9444444444444444,
+      "defect_recall": 0.7692307692307693
+    }
+  }
+}

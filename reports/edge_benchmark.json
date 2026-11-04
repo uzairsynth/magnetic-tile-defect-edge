@@ -1,0 +1,106 @@
+{
+  "model": "mobilenet_v3_small",
+  "test_images": 192,
+  "calibration_images": 200,
+  "threads": 1,
+  "batch_size": 1,
+  "variants": {
+    "PyTorch FP32": {
+      "file_mb": 6.23,
+      "median_ms": 40.03,
+      "p90_ms": 64.21,
+      "macro_f1": 0.7466,
+      "accuracy": 0.8802,
+      "defect_recall": 0.75,
+      "false_alarm_rate": 0.0294,
+      "agreement_with_pytorch": 1.0,
+      "max_abs_logit_diff": 0.0
+    },
+    "ONNX FP32": {
+      "file_mb": 6.35,
+      "median_ms": 10.68,
+      "p90_ms": 20.65,
+      "macro_f1": 0.7466,
+      "accuracy": 0.8802,
+      "defect_recall": 0.75,
+      "false_alarm_rate": 0.0294,
+      "agreement_with_pytorch": 1.0,
+      "max_abs_logit_diff": 2e-05
+    },
+    "ONNX INT8, all layers": {
+      "file_mb": 1.8,
+      "median_ms": 17.69,
+      "p90_ms": 29.62,
+      "macro_f1": 0.0558,
+      "accuracy": 0.0938,
+      "defect_recall": 1.0,
+      "false_alarm_rate": 1.0,
+      "agreement_with_pytorch": 0.099,
+      "max_abs_logit_diff": 6.91911
+    },
+    "ONNX INT8, mixed": {
+      "file_mb": 1.79,
+      "median_ms": 13.96,
+      "p90_ms": 21.96,
+      "macro_f1": 0.7501,
+      "accuracy": 0.8906,
+      "defect_recall": 0.8036,
+      "false_alarm_rate": 0.0294,
+      "agreement_with_pytorch": 0.9688,
+      "max_abs_logit_diff": 1.36576
+    }
+  },
+  "mixed_precision": {
+    "layers": 54,
+    "fp32_layers": [
+      "node_Conv_508",
+      "node_Conv_506",
+      "node_Conv_518",
+      "node_Conv_512",
+      "node_Conv_514",
+      "node_Conv_526"
+    ],
+    "val_agreement": 0.9844559585492227,
+    "target_agreement": 0.98,
+    "most_sensitive": [
+      {
+        "layer": "node_Conv_508",
+        "mean_abs_logit_change": 2.0531
+      },
+      {
+        "layer": "node_Conv_506",
+        "mean_abs_logit_change": 1.9758
+      },
+      {
+        "layer": "node_Conv_518",
+        "mean_abs_logit_change": 0.7548
+      },
+      {
+        "layer": "node_Conv_512",
+        "mean_abs_logit_change": 0.5629
+      },
+      {
+        "layer": "node_Conv_514",
+        "mean_abs_logit_change": 0.2355
+      },
+      {
+        "layer": "node_Conv_526",
+        "mean_abs_logit_change": 0.1074
+      },
+      {
+        "layer": "node_Conv_510",
+        "mean_abs_logit_change": 0.094
+      },
+      {
+        "layer": "node_Conv_524",
+        "mean_abs_logit_change": 0.0929
+      }
+    ]
+  },
+  "environment": {
+    "cpu": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+    "torch": "2.15.0+cpu",
+    "onnxruntime": "1.31.1",
+    "onnx_opset": 18
+  }
+}

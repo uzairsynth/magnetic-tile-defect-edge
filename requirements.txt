@@ -1,0 +1,13 @@
+# CPU wheels: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+torch>=2.9
+torchvision>=0.24
+numpy>=2.0
+pandas>=2.2
+scikit-learn>=1.5
+pillow>=10.0
+matplotlib>=3.9
+onnx>=1.17
+onnxscript>=0.5
+onnxruntime>=1.20
+gradio>=5.0
+pytest>=8.0

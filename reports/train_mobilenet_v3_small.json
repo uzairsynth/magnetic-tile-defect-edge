@@ -1,0 +1,223 @@
+{
+  "name": "mobilenet_v3_small",
+  "arch": "mobilenet_v3_small",
+  "split": "grouped",
+  "parameters": 1524006,
+  "pretrained": true,
+  "lr": 0.001,
+  "epochs_run": 18,
+  "best_epoch": 13,
+  "stop_reason": "time budget (15 min)",
+  "train_seconds": 945.3,
+  "split_sizes": {
+    "train": 959,
+    "val": 193,
+    "test": 192
+  },
+  "val": {
+    "n": 193,
+    "accuracy": 0.9740932642487047,
+    "macro_f1": 0.9614537212734556,
+    "balanced_accuracy": 0.9571078431372548,
+    "per_class": {
+      "Free": {
+        "precision": 0.9852941176470589,
+        "recall": 0.9852941176470589,
+        "f1": 0.9852941176470589,
+        "support": 136
+      },
+      "Blowhole": {
+        "precision": 0.8823529411764706,
+        "recall": 0.8823529411764706,
+        "f1": 0.8823529411764706,
+        "support": 17
+      },
+      "Break": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 13
+      },
+      "Crack": {
+        "precision": 1.0,
+        "recall": 0.875,
+        "f1": 0.9333333333333333,
+        "support": 8
+      },
+      "Fray": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Uneven": {
+        "precision": 0.9375,
+        "recall": 1.0,
+        "f1": 0.967741935483871,
+        "support": 15
+      }
+    },
+    "defect_detection": {
+      "defects": 57,
+      "caught": 55,
+      "recall": 0.9649122807017544,
+      "good_tiles": 136,
+      "false_alarms": 2,
+      "false_alarm_rate": 0.014705882352941176,
+      "pr_auc": 0.9830224885626548
+    },
+    "confusion_matrix": [
+      [
+        134,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        15,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        13,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        7,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        15
+      ]
+    ]
+  },
+  "test": {
+    "n": 192,
+    "accuracy": 0.8802083333333334,
+    "macro_f1": 0.7465908256611309,
+    "balanced_accuracy": 0.6849673202614378,
+    "per_class": {
+      "Free": {
+        "precision": 0.9041095890410958,
+        "recall": 0.9705882352941176,
+        "f1": 0.9361702127659575,
+        "support": 136
+      },
+      "Blowhole": {
+        "precision": 0.6666666666666666,
+        "recall": 0.7058823529411765,
+        "f1": 0.6857142857142857,
+        "support": 17
+      },
+      "Break": {
+        "precision": 0.9090909090909091,
+        "recall": 0.8333333333333334,
+        "f1": 0.8695652173913043,
+        "support": 12
+      },
+      "Crack": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5,
+        "f1": 0.5714285714285714,
+        "support": 8
+      },
+      "Fray": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "support": 4
+      },
+      "Uneven": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.75,
+        "support": 15
+      }
+    },
+    "defect_detection": {
+      "defects": 56,
+      "caught": 42,
+      "recall": 0.75,
+      "good_tiles": 136,
+      "false_alarms": 4,
+      "false_alarm_rate": 0.029411764705882353,
+      "pr_auc": 0.9479395451990242
+    },
+    "confusion_matrix": [
+      [
+        132,
+        3,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        5,
+        12,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        10,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        1,
+        4,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        9
+      ]
+    ]
+  }
+}

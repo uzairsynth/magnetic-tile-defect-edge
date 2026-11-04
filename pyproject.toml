@@ -1,0 +1,12 @@
+[project]
+name = "magnetic-tile-defect-edge"
+version = "1.0.0"
+description = "Magnetic tile surface-defect classification with leakage-free splits, Grad-CAM checks and INT8 edge export"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning", "ignore::UserWarning"]
